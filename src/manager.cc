@@ -41,8 +41,8 @@ void MENU() {
             std::int64_t AccId;
             std::cout << "输入账户ID: ";
             std::cin >> AccId;
-            auto Acc = bank->getAccount(AccId);
-            Acc.get();
+            // auto Acc = bank->getAccount(AccId);
+            // Acc.get();
             break;
         }
         case 3: {
