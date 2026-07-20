@@ -1,6 +1,9 @@
 #include "credit_card_account.h"
 #include <iostream>
 
+CreditCardAccount::CreditCardAccount(double amount_)
+    : availableCredit(amount_), creditLimit(amount_), currentDebt(0.00) {}
+
 void CreditCardAccount::charge(double amount_) {
     if (amount_ <= 0) {
         std::cout << "取款数不能为负数或零" << std::endl;

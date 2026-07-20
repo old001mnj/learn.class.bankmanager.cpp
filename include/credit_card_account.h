@@ -7,6 +7,7 @@ class CreditCardAccount {
     double availableCredit;
 
   public:
+    CreditCardAccount(double amount_);
     void charge(double amount_);
     void makePayment(double amount_);
     void getStatement();
