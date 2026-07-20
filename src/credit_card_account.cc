@@ -1,8 +1,13 @@
 #include "credit_card_account.h"
+#include "account.h"
+#include <cstdint>
 #include <iostream>
+#include <string>
 
-CreditCardAccount::CreditCardAccount(double amount_)
-    : availableCredit(amount_), creditLimit(amount_), currentDebt(0.00) {}
+CreditCardAccount::CreditCardAccount(std::int64_t id_,
+                                     const std::string &owner_, double balance_)
+    : Account(id_, owner_, balance_), availableCredit(balance_),
+      creditLimit(balance_), currentDebt(0.00) {}
 
 void CreditCardAccount::charge(double amount_) {
     if (amount_ <= 0) {

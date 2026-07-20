@@ -1,7 +1,14 @@
 #include "checking_account.h"
+#include "account.h"
+#include <cstdint>
 #include <iostream>
+#include <string>
 
 double CheckingAccount::OverdraftLimit_ = 1200.00;
+
+CheckingAccount::CheckingAccount(std::int64_t id_, const std::string &owner_,
+                                 double balance_)
+    : Account(id_, owner_, balance_) {}
 
 void CheckingAccount::withdraw(double amount_) {
     if (amount_ <= 0 || amount_ >= (this->balance + this->OverdraftLimit_)) {

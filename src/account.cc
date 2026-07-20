@@ -32,10 +32,6 @@ double Account::getBalance() const {
     return this->balance;
 }
 
-Account::~Account() {
-    std::cout << this->owner << "，您的账户已注销" << std::endl;
-}
-
 std::int64_t Account::getId() const { return this->id; }
 
 const std::string &Account::getOwner() const { return this->owner; }

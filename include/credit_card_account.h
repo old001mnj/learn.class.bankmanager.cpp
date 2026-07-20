@@ -1,13 +1,16 @@
 #pragma once
 
-class CreditCardAccount {
+#include "account.h"
+#include <cstdint>
+class CreditCardAccount : public Account {
   private:
     double creditLimit;
     double currentDebt;
     double availableCredit;
 
   public:
-    CreditCardAccount(double amount_);
+    CreditCardAccount(std::int64_t id_, const std::string &owner_,
+                      double balance_);
     void charge(double amount_);
     void makePayment(double amount_);
     void getStatement();

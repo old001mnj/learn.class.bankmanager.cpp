@@ -19,5 +19,5 @@ class Account {
     double getBalance() const;
     std::int64_t getId() const;
     const std::string &getOwner() const;
-    virtual ~Account();
+    virtual ~Account() = default;
 };
