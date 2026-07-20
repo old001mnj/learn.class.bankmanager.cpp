@@ -1,6 +1,7 @@
 add_rules("mode.debug", "mode.release")
 
 -- set_toolchains("gcc", {cxx="g++-16",cc="gcc-16",ld="g++-16"})
+-- cmd: xmake -f ... -c
 
 target("mybanklib")
     set_version("1.0.0", {soname=true})
