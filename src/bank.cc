@@ -10,7 +10,6 @@
 void Bank::openAccount(int accountType_, const std::string &owner_,
                        double firstBalance_) {
     std::int64_t tmpId = ++this->nextId;
-ACCTYPE:
     switch (accountType_) {
     case 1:
         // 储蓄账户
@@ -32,7 +31,6 @@ ACCTYPE:
 
     default:
         std::cout << "请在1, 2, 3中挑选" << std::endl;
-        goto ACCTYPE;
         break;
     }
 }
