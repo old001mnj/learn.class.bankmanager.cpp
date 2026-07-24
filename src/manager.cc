@@ -51,7 +51,7 @@ void MENU() {
             const auto &result = bank->getAccount(AccId);
             std::cout << "账户ID: " << result->getId() << ' '
                       << "户主: " << result->getOwner() << ' '
-                      << "账户剩余金额: " << result->getBalance();
+                      << "账户剩余金额: " << result->getBalance() << std::endl;
             break;
         }
         case 4: {
