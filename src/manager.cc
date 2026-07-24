@@ -41,16 +41,29 @@ void MENU() {
             std::int64_t AccId;
             std::cout << "输入账户ID: ";
             std::cin >> AccId;
-            // auto Acc = bank->getAccount(AccId);
-            // Acc.get();
+            bank->closeAccount(AccId);
             break;
         }
         case 3: {
-            std::cout << "3" << std::endl;
+            std::cout << "输入账户ID: ";
+            std::int64_t AccId;
+            std::cin >> AccId;
+            const auto &result = bank->getAccount(AccId);
+            std::cout << "账户ID: " << result->getId() << ' '
+                      << "户主: " << result->getOwner() << ' '
+                      << "账户剩余金额: " << result->getBalance();
             break;
         }
         case 4: {
-            std::cout << "4" << std::endl;
+            std::int64_t fromId, toId;
+            double amount_;
+            std::cout << "输入转账账户ID: ";
+            std::cin >> fromId;
+            std::cout << "输入转账目标账户ID: ";
+            std::cin >> toId;
+            std::cout << "输入转账金额: ";
+            std::cin >> amount_;
+            bank->transfer(fromId, toId, amount_);
             break;
         }
         case 5: {

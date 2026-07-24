@@ -15,6 +15,7 @@ target("main")
     set_kind("binary")
     add_deps("mybanklib")
     add_files("test/*.cpp")
+    -- set_policy("build.c++.modules", true)
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

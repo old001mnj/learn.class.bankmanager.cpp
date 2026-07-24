@@ -28,7 +28,7 @@ void Account::withdraw(double amount_) {
 }
 
 double Account::getBalance() const {
-    std::cout << "当前余额：" << this->balance << std::endl;
+    // std::cout << "当前余额：" << this->balance << std::endl;
     return this->balance;
 }
 
